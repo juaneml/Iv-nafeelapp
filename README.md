@@ -1,8 +1,3 @@
-#EXAMPLE 
+# Documentación con gh-pages para el proyecto de la asignatura IV
+## Se realiza a partir de una plantilla de bootstrap gratuita que voy a ir configurando convenientemente para las necesidades de la asignatura IV.
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
-# Iv-nafeelapp
