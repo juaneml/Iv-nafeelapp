@@ -1,8 +1,11 @@
 
 language: generic # don't install any environment
 
-script: bash ./deploy.sh
+script: 
+- bash ./deploy.sh
 env:
   global:
-  - ENCRYPTION_LABEL: "$GITHUB_TOKEN"
-  - COMMIT_AUTHOR_EMAIL: "juanes.ml89@gmail.com"
+    - GITHUB_REPO: "juaneml/doc_IV-1920_Proyecto"
+    - secure: "$GITHUB_TOKEN"  # <-- from travis-encrypt
+
+
