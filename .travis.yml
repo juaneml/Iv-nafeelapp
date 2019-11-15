@@ -1,8 +1,15 @@
 
-language: node_js
-node_js:
-  - 7
-  - npm test
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: gh-pages
+#language: node_js
+#node_js:
+#  - 7
+#  - npm test
 #language: generic # don't install any environment
 
 #script: 
