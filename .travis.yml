@@ -1,0 +1,22 @@
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: gh-pages
+#language: node_js
+#node_js:
+#  - 7
+#  - npm test
+#language: generic # don't install any environment
+
+#script: 
+#- bash ./deploy.sh
+#env:
+#  global:
+#    - GITHUB_REPO: "juaneml/doc_IV-1920_Proyecto"
+#    - secure: "$GITHUB_TOKEN"  # <-- from travis-encrypt
+
+
