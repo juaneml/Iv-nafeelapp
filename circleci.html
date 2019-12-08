@@ -11,9 +11,11 @@
   <style>
   p.one {
     border-style: solid;
-    border-color: red;
+    border-color: whitesmoke;
     color: black;
     background: white;
+    text-align: left;
+    padding-left: 20px;
   }
   p.two {
     border-style: solid;
@@ -50,7 +52,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link pl-0 " href="tecno_usadas.html"><i class="fa fa-book fa-fw"></i> <span class="font-weight-bold">Herramientas</span></a>
-                              </li>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link pl-0 " href="herramientas.html"><i class="fa fa-book fa-fw"></i> <span class="font-weight-bold">Herramientas construcción</span></a>
                             </li>
@@ -59,17 +61,17 @@
                                     <p class="text-white-50 mb-4"> <span class="font-weight-bold"> Integración continua </span> </p>
                                     <ul class="nav-item">
                                         <a class="nav-link pl-0" href="travis.html"><i class="fa fa-book fa-fw"></i> <span class="d-none d-md-inline">Travis</span></a>
-                                        <a class="nav-link pl-0" href="circleci.html"><i class="fa fa-book fa-book fa-fw"></i> <span class="d-none d-md-inline">Circle Ci</span></a>
+                                        <a class="text-warning mb-4" href="circleci.html"><i class="fa fa-book fa-book fa-fw"></i> <span class="d-none d-md-inline">Circle Ci</span></a>
                                         <a class="nav-link pl-0" href="jenkins.html"><i class="fa fa-book fa-fw"></i> <span class="d-none d-md-inline">jenkins</span></a>
                                     </ul>
-                                </li>
+                                  </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link pl-0" href="documentacion_clases.html"><i class="fa fa-bars fa-fw"></i> <span class="d-none d-md-inline">Documentación clases</span></a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link pl-0" href="index.html"><i class="fa fa-star fa-fw"></i> <span class="d-none d-md-inline">Home</span></a>
+                                <a class="nav-link pl-0" href="index.html"><i class="fa fa-star fa-fw"></i> <span class="d-none d-md-inline">Home</span></a>
                             </li>
                         </ul>
                     </div>
@@ -118,28 +120,131 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Integración continua</h2>
-          <h3 class="text-white mb-2"> CircleCi</h3>
-            <p class="text-white-50 mb-4">
-              &bull; <a href="url">NOMBRE </a>
-            </p>
-            <textarea class="one" rows="2" cols="80">
-              ok
-            </textarea>
-          </div>
+            <h2 class="text-white mb-4">Integración continua</h2>
+            <h3 class="text-white mb-2">
+              <a href=https://circleci.com/>circleci </a><img src="img/circleci.png" alt=" alt text" width="40px" height="40px">
+            </h3>
+              <p class="text-white-50 mb-4">
+                &bull; Como sistema de integración continua opcional se ha elegido <a href=https://circleci.com/>circleci.</a>
+                <br>
+                &bull; Para poder hacer uso del servicio de circleci vamos a la página de  <a href =https://circleci.com/>circleci.</a>
+              </p>
+              <!--1.Registros-->
+              <h3 class="text-white mb-4">1. Registro</h3>
+              <p class="text-white-50 mb-4">
+                &bull; Nos creamos una cuenta con la cuenta de github.</p>
+                <img src="img/login_circle.png" alt="alt text" width="700px" height="400px">
+              </p>
+              <!-- 2. Añadimos el proyecto-->
+              <h3 class="text-white mb-4"> 2. Añadimos el proyecto</h3>
+              <p class="text-white-50 mb-4">
+                &bull; Una vez iniciamos sesión vamos a sección <strong class="text-warning mb-4">"add projects"</strong> botton <strong class="text-warning mb-4">"+"</strong> y añadimos el proyecto al que queremos hacer el seguimiento, pulsamos <strong class="text-warning mb-4">"Set up Proyect".</strong>
+                <br>
+                <br>
+                &bull; Veremos algo como esto
+                <!--imagen-->
+                <br>
+                <img src="img/set_up_circle.png" alt="alt text" width="700px" height="400px">
+                <br>
+                &bull; Elegimos el sistema operativo, en mi caso Linux.
+                <br>
+                &bull; Elegimos el lenguage de programación, en mi caso Python.
+              </p>
+              <!-- ### 3. Configuración archivo `.circleci/config.yml` -->
+              <h3 class="text-white mb-4"> 3. Configuración archivo <strong class="text-warning mb-4">circleci/config.yml</strong> </h3>
+              <p class="text-white-50">
+                  &bull; A continuación, segimos la instruciones en pantalla para crear el archivo <strong class="text-warning">config.yml.</strong>
+                  <br>
+                  &bull; Dentro de nuestro repositodio creamos una carpeta con el nombre <strong class="text-warning">.circleci</strong> y dentro de la carpeta creamos el archivo <strong class="text-warning">config.yml</strong>
+                  <br>
+                  &bull;Para la creación de la carpeta y el archivo podemos hacerlo de dos formas en la página de Github situandonos en la raíz de nuestro repositorio o bien si tenemos clonado nuestro reposotorio en nuestro lugar de trabajo local.
+                  <br>
+                  &bull;Voy a optar por la segunda opción por tanto abrimos un terminal y ejecutamos las siguientes intrucciones:
+                  <br>
+                  <p class="one">
+                      mkdir .circleci
+                      vi .circleci / config.yml
+                    </p>
+                  <p class="text-white-50">
+                      &bull; Mi configuración del archivo config.yml es así:
+                  </p>
+                  <p class="one">
+                        ##<br>
+                        # Check https://circleci.com/docs/2.0/language-python/  <br>
+                        #	# <br>
+                        version: 2 <br>
+                        jobs: <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;build:<br>
+                            docker: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;- image: circleci/python:3.7-rc-node<br>
+                            working_directory: ~/prueba_travis<br>
+                            steps:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;- checkout<br>
+                               # Download and cache dependencies<br>
+                              - restore_cache:<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;keys:<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;- v1-dependencies-{{ checksum "requirements.txt" }}<br>
+                                    # fallback to using the latest cache if no exact match is found<br>
+                                    - v1-dependencies-<br>
+                              - run: sudo pip3 install -r requirements.txt<br>
+                              - run: sudo npm install npm-install-all -g<br>
+                              - run: sudo npm install pm2 -g<br>
+                              - run:<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;name: init app<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;command: make start<br>
+                              - run:<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;name: status app <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;command: make status <br>
+                              - run:<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;name: tests <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;command: make -B test <br>
+                              - run: <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;name: stop app <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;command: make stop <br>
+                              - run: <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;name: delete app<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;command: make delete<br>
+                              <br>
+                    </p>
+                    <p class="text-white-50 mb-4">
+                      &bull;Pasamos a explicar, la configuración del archivo config.yml
+                        <br>
+                        &bull;Primero definimos la imagen que en mi caso es un contenedor con ubuntu y como lenguaje python 3.7.
+                        <br>
+                        &bull;Resturamos la cache del contenedor.
+                        <br>
+                        &bull;Instalamos el fichero requirements.txt<br>
+                        &bull;Instalamos el gestor nmp para poder instalar el gestor de tareas pm2.
+                        <br>
+                        &bull;Instalamos el gestor de tareas pm2.
+                        <br>
+                        &bull;Haciendo uso de make, <strong class="text-warning">make start</strong>  iniciamos el servicio.
+                        <br>
+                        &bull;Con <strong class="text-warning">make status</strong>, vemos el estado del servicio.
+                        <br>
+                        &bull;Para ejecutar los test hacemos `make -B test` la opción `-B` para forzar que se hagan los test.
+                        <br>
+                        &bull;Para parar el servio <strong class="text-warning">make stop.</strong>
+                        <br>
+                        &bull;Para borrar el servicio del gestor de tareas hacemos uso de <strong class="text-warning">make delete</strong>
+                      </p>
+                      <h5> Salida circleci </h5>
+                     <img src="img/salida_circleci.png" height="400px" width="700px">
+              </p>
+            </div>
       </div>
     </div>
   </section>
   <!-- Signup Section -->
   <section id="signup" class="signup-section">
     <div class="container">
-      ok 2
     </div>
   </section>
   <!-- Contact Section -->
   <section class="contact-section bg-black">
     <div class="container">
 
+      <!--Address, Email-->
       <div class="row">
 
         <div class="col-md-4 mb-3 mb-md-0">
@@ -166,6 +271,8 @@
           </div>
         </div>
       </div>
+
+      <!--Address, Email-->
 
       <div class="social d-flex justify-content-center">
         <a href="https://twitter.com/Juanes_moreloz" class="mx-2">

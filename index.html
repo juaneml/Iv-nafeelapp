@@ -11,9 +11,12 @@
   <style>
   p.one {
     border-style: solid;
-    border-color: red;
+    border-color:whitesmoke;
     color: black;
     background: white;
+    text-align: left;
+    padding-left: 20px;
+
   }
   
   p.two {
@@ -72,7 +75,7 @@
                                 <a class="nav-link pl-0" href="documentacion_clases.html"><i class="fa fa-bars fa-fw"></i> <span class="d-none d-md-inline">Documentación clases</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-0" href="index.html"><i class="fa fa-star fa-fw"></i> <span class="d-none d-md-inline">Home</span></a>
+                                <a class="text-warning" href="index.html"><i class="fa fa-star fa-fw"></i> <span class="d-none d-md-inline">Home</span></a>
                             </li>
                         </ul>
                     </div>
@@ -151,7 +154,7 @@
             documentandome por la web vi que para un alto volumen de datos el rendimiento con otras bases de datos es mayor, por lo que para 
             un futura continuación del proyecto me parece muy atractivo.
             </p> 
-            <h3 class="text-white-50 mb-2"> Logs </h3>
+            <h3 class="text-white mb-2"> Logs </h3>
             <p class="text-white-50 mb-4">
               &bull;Para el login de los usuarios y los logs haré uso de la biblioteca de python <a href="https://docs.python.org/3/library/logging.html")> logs </a> que permitirá el 
               correcto registro de mensajes para el microservicio.
@@ -186,13 +189,13 @@
                 &bull;Para poder hacer uso del servicio de Jenkins vamos a la página de <a href="https://jenkins.io/">Jenkins</a>
                 &bull;Abrimos un terminal y ejecutamos las siguientes instrucciones: 
             </p>
-            <textarea class="one" rows="8" cols="80">
+            <p class="one">
+
               wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
               sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
               sudo apt-get update
-              sudo apt-get install jenkins
-            </textarea>
-
+              sudo apt-get installing
+            </p>
             <p class="text-white-50 mb-4">
               &bull;Para más información puedes consultar la documentación facilitada pof <a href="https://jenkins.io/doc/book/installing/">Jenkis doc </a> 
               &bull; Una vez instalado vamos a nuestro navegador y escribimos:
